@@ -1,0 +1,12 @@
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialCreate
+dotnet ef migrations remove
+dotnet build
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet ef migrations add User
+
+dotnet add package Swashbuckle.AspNetCore.Filters
+[AllowAnonymous]
+
+Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJwYXRyaWNrIiwibmJmIjoxNjgyMzk0MjIyLCJleHAiOjE2ODI0ODA2MjIsImlhdCI6MTY4MjM5NDIyMn0.FyLcypu6GXuYU-zzM8vQCfs_j0bC6y3RgO8ogYuraRBIPp6xfihZ0a_zd20UcS-iRk0bO4JqSTokLET3vkopvQ
